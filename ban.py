@@ -10,15 +10,9 @@ def getBalance(wallet):
     ban_str = (resArr[42])
     banoshi_str = (resArr[44])
 
-    print("dry")
-    print(ban_str+banoshi_str)
-    print("dry")
-
     ban = ban_str[1:len(ban_str)-2]
     banoshi = banoshi_str[1:len(banoshi_str)-2]
-
-    print(str(ban)+','+str(banoshi))
-
+    
     total_ban = float(ban) + float(banoshi) / 100
     return total_ban
 

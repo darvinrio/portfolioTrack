@@ -12,19 +12,28 @@ wallets['coins'] = 0
 wallets['usd_value'] = 0
 wallets['inr_value'] = 0
 
+print(wallets.head())
+
 def getIt(row):
-    row[3] = ban.getBalance(row[2])
-    row[4] = getPrice.getPrice(row[1])
-    row[5] = row[4]*row[5]
-    #print(row[0])
+    # get row label
+    l = row[0] 
 
-#cpu = mp.cpu_count()
+    # get wallet balance
+    wallets.iloc[l,3] = ban.getBalance(wallets.iloc[l,2])
 
-#with mp.Pool(cpu) as pool :
-#    pool.map(getIt, wallets.itertuples(name=None))
+    # calculate value of coins
+    value = calculate.calculate(wallets.iloc[l,1],wallets.iloc[l,3])
+
+    print(value)
+
+    #store 
+    wallets.iloc[l,4] = value[0]
+    wallets.iloc[l,5] = value[1]
+    print(wallets.head())
+
+cpu = mp.cpu_count()
+
+with mp.Pool(cpu) as pool :
+    pool.map(getIt, wallets.itertuples(name=None))
 
 print(wallets.head())
-test = ['kaliumMain','ban','ban_3mu93fpkbmfuh99jqoq148ge4mgfq5xraeu94mkzno9atc5cy7oqrpjeypxr']
-
-print(type(test))
-getIt(test)

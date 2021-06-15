@@ -1,9 +1,9 @@
 import pandas as pd 
 import multiprocessing as mp
-import ban
 import calculate
 import getPrice
 import asyncio
+import getBal as gb
 #----------------------------------------------------------
 
 wallets = pd.read_csv('private/wallets.csv')
@@ -24,7 +24,7 @@ def getIt(row):
     }
      
     # get wallet balance
-    outDict['coin_no'] = ban.getBalance(outDict['address'])
+    outDict['coin_no'] = gb.getBalance(outDict['address'],outDict['coin'])
 
     # calculate value of coins
     value = calculate.calculate(wallets.iloc[l,1],outDict['coin_no'])

@@ -49,8 +49,8 @@ def printOut():
     #convert List of Dicts to DF
     d = pd.DataFrame(outDicts)
     
-    print(d)
+    return d
     
 
-printOut()
+#printOut()
 

@@ -1,0 +1,31 @@
+<html>
+    <head> 
+        <title>Crypto Portfolio</title>
+    </head>
+    <body>
+        <h1>Wallet Balances</h1>
+        
+        <table>
+            <tr>
+                <th>Wallet name</th>
+                <th>Coin</th>
+                <th>Address</th>
+                <th>Balance</th>
+                <th>USD value</th>
+                <th>INR value</th>
+
+             </tr>
+            {% for row in d.itertuples(name=None) %}
+            <tr>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+                <td>{{row[3]}}</td>
+                <td>{{row[4]}}</td>
+                <td>{{row[5]}}</td>
+                <td>{{row[6]}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        
+    </body>
+</html>

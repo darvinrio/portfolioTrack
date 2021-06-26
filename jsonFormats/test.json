@@ -5,17 +5,17 @@
     "base": {
         "base": "luna",
         "noOfCoins": 0.314476,
-        "usd_value": "usd value",
-        "total_usd_value": "total value",
-        "total_inr_value": "total inr_value"
+        "usd_value": 5.13,
+        "total_usd_value": 1.6132618799999998,
+        "total_inr_value": 119.7524608
     },
     "tokens": [
         {
-            "token": "uusd",
+            "token": "ust",
             "noOfCoins": 0.619948,
-            "usd_value": "usd value",
-            "total_usd_value": "total value",
-            "total_inr_value": "total inr_value"
+            "usd_value": 1.0,
+            "total_usd_value": 0.619948,
+            "total_inr_value": 46.210923920000006
         }
     ],
     "defi": null

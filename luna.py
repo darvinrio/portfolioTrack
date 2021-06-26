@@ -2,6 +2,7 @@ from terra_sdk.client.lcd import LCDClient
 import createJSON as cj
 import json
 import getPrice as price
+import calculate
 
 wallet = 'terra1jse8nzxu5uf9tq5m4rw9v0hhqcfutahay6zj74'
 
@@ -19,6 +20,13 @@ def getCoinBal(wallet, coin):
     properCoin = float(coinBal)/(10**6) 
     return properCoin
 
+def coinName(coin): #you might have to replace this with dictionary
+    switch = {
+        'uusd' : 'ust',
+        'uluna' : 'luna'
+    }
+    return switch.get(coin)
+
 def getLunaWallet(wallet):
     walletBank = terra.bank.balance(wallet['address'])
     coinList = walletBank.denoms()
@@ -34,25 +42,38 @@ def getLunaWallet(wallet):
     
     i = 0
 
-    for coin in coinList:
-        if coin != 'uluna':
+    for coinDenom in coinList:
+        coin = coinName(coinDenom)
+
+        if coinDenom != 'uluna':
             token = cj.createTokenJSON()
             lunaJson['tokens'].append(token)
-            
+                     
             lunaJson['tokens'][i]['token'] = coin
-            lunaJson['tokens'][i]['noOfCoins'] = getCoinBal(walletBank, coin)
-        
+            coinBal = getCoinBal(walletBank, coinDenom)
+            lunaJson['tokens'][i]['noOfCoins'] = coinBal
+            coinPrice = price.getPrice(coin)
+            value = calculate.calculateVal(coinPrice, coinBal)
+            lunaJson['tokens'][i]['usd_value'] = coinPrice['usd']
+            lunaJson['tokens'][i]['total_usd_value'] = value['usd']
+            lunaJson['tokens'][i]['total_inr_value'] = value['inr']
+
             i += 1
             continue
 
-        lunaJson['base']['base'] = 'luna'
-        lunaJson['base']['noOfCoins'] = getCoinBal(walletBank, coin)
-        coinPrice = price.getPrice('luna')
+        lunaJson['base']['base'] = coin
+        coinBal = getCoinBal(walletBank, coinDenom)
+        lunaJson['base']['noOfCoins'] = coinBal
+        coinPrice = price.getPrice(coin)
+        value = calculate.calculateVal(coinPrice, coinBal)
         lunaJson['base']['usd_value'] = coinPrice['usd']
-        
-
+        lunaJson['base']['total_usd_value'] = value['usd']
+        lunaJson['base']['total_inr_value'] = value['inr']
+      
     return lunaJson
 
 if __name__ == "__main__" :
     out = getLunaWallet(walletJson)
     print(json.dumps(out))
+    with open('jsonFormats/test.json','w') as file :
+        file.write(json.dumps(out))

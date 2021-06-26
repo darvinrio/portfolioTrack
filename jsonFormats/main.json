@@ -1,0 +1,14 @@
+{
+    "walletName" : "walletName",
+    "network" : "base coin",
+    "wallet_address" : "public_key",
+    "base" : {
+        "base" : "baseCoin",
+        "noOfCoins":"number",
+        "usd_value":"usd value",
+        "total_usd_value":"total value",
+        "total_inr_value":"total inr_value"
+    },
+    "tokens" : null,
+    "defi" : null
+}

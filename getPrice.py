@@ -8,3 +8,5 @@ def getPrice(coinSym): #return value of each coinSym in usd and inr
     x = cg.get_price(ids=coinID, vs_currencies=['usd','inr']) #returns dict
     return x[coinID] #extract and return price list 
 
+if __name__ == "__main__" :
+    print(getPrice('ust'))

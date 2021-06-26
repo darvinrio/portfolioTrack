@@ -1,0 +1,22 @@
+{
+    "walletName": "terraStation",
+    "network": "luna",
+    "wallet_address": "terra1jse8nzxu5uf9tq5m4rw9v0hhqcfutahay6zj74",
+    "base": {
+        "base": "luna",
+        "noOfCoins": 0.314476,
+        "usd_value": "usd value",
+        "total_usd_value": "total value",
+        "total_inr_value": "total inr_value"
+    },
+    "tokens": [
+        {
+            "token": "uusd",
+            "noOfCoins": 0.619948,
+            "usd_value": "usd value",
+            "total_usd_value": "total value",
+            "total_inr_value": "total inr_value"
+        }
+    ],
+    "defi": null
+}

@@ -1,0 +1,13 @@
+{
+    "token" : "token",
+    "delegations":{},
+    "total":{
+        "noOfStakedCoins" : "number",
+        "usd_value" : "usd value",
+        "total_usd_value" : "total value",
+        "total_inr_value" : "total inr_value",
+        "rewards" : "",
+        "rewards_usd_val" : "",
+        "reward_inr_val" : ""
+    }
+}

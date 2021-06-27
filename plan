@@ -1,2 +1,60 @@
 recieve network and address
 each network returns 
+
+[Delegation(
+    delegator_address='terra1jse8nzxu5uf9tq5m4rw9v0hhqcfutahay6zj74', validator_address='terravaloper1p94a6vwl9dkd98cyrlmzf6ydjdgfvamyhu33fa', shares=Dec('1000000'), balance=Coin(denom='uluna', amount=1000000)), 
+Delegation(
+    delegator_address='terra1jse8nzxu5uf9tq5m4rw9v0hhqcfutahay6zj74', validator_address='terravaloper19hflr9ay8usqxsxm4zzrsxfy3xz7hp6kv4ydnd', shares=Dec('400000'), balance=Coin(denom='uluna', amount=400000)),
+ Delegation(
+    delegator_address='terra1jse8nzxu5uf9tq5m4rw9v0hhqcfutahay6zj74', validator_address='terravaloper1259cmu5zyklsdkmgstxhwqpe0utfe5hhyty0at', shares=Dec('1000000'), balance=Coin(denom='uluna', amount=1000000)), 
+Delegation(
+    delegator_address='terra1jse8nzxu5uf9tq5m4rw9v0hhqcfutahay6zj74', validator_address='terravaloper1t90gxaawul292g2vvqnr3g0p39tw5v6vsk5p96', shares=Dec('1000100.009695937171981395'), balance=Coin(denom='uluna', amount=1000000))]
+
+Rewards(
+    rewards={
+        'terravaloper1p94a6vwl9dkd98cyrlmzf6ydjdgfvamyhu33fa': Coins(
+            '0.010179563717uaud,0.013596509325ucad,0.019536868942uchf,0.002533690317ucny,0.000000278556udkk,0.061055689137ueur,0.005145937675ugbp,0.000844580754uhkd,0.102809122648uinr,0.553435902596ujpy,3133304.317902943767ukrw,4998.870496073774uluna,92657.391134687079umnt,21.558618166785usdr,0.030267839692usek,0.000000161505usgd,0.315955027849uthb,3912.899742538359uusd'), 
+        'terravaloper19hflr9ay8usqxsxm4zzrsxfy3xz7hp6kv4ydnd': Coins(
+            '0.004154960604uaud,0.005549031118ucad,0.007472671222uchf,0.001034159612ucny,0.000000113696udkk,0.0245574696912ueur,0.0020995937852ugbp,0.0003447267188uhkd,0.044125979396uinr,0.2258921400412ujpy,1285947.4803792306236ukrw,2047.0676543306144uluna,37623.1382582048392umnt,8.9011615836904usdr,0.0123542375156usek,0.0000000659204usgd,0.1313777567776uthb,1598.3825913168932uusd'), 
+        'terravaloper1259cmu5zyklsdkmgstxhwqpe0utfe5hhyty0at': Coins(
+            '0.000575452445uaud,0.004138963498ucad,0.004795378622uchf,0.0018596536ucny,0.000000284241udkk,0.010761890035ueur,0.000814934677ugbp,0.00000004375uhkd,0.007625420018uinr,0.005438751436ujpy,950737.013680035075ukrw,1806.352098679722uluna,21043.915209022267umnt,3.815366842634usdr,0.021116242243usek,0.000000030694usgd,0.185170820971uthb,1014.775061330481uusd'), 
+        'terravaloper1t90gxaawul292g2vvqnr3g0p39tw5v6vsk5p96': Coins(
+            '0.002128474930999999uaud,0.006162284671999999ucad,0.012749345750999999uchf,0.001879845161999999ucny,0.000000278555999999udkk,0.018685557886999999ueur,0.001261763337999999ugbp,0.000750134487999999uhkd,0.031411909252999999uinr,0.478896710258999999ujpy,1914799.190000041594999998ukrw,3360.032275527891999999uluna,58459.535496541865999999umnt,11.378489528574999999usdr,0.022928149893999999usek,0.000000052186999999usgd,0.347593613171999999uthb,1986.658055670093999999uusd')}, 
+    total=Coins(
+        '0.017038451696999999uaud,
+        0.029446788612999999ucad,
+        0.044554264536999999uchf,
+        0.007307348690999999ucny,
+        0.000000955048999999udkk,
+        0.115060606750199999ueur,
+        0.009322229475199999ugbp,
+        0.001939485710799999uhkd,
+        0.185972431314999999uinr,
+        1.263663504332199999ujpy,
+        7284788.001962251060599998ukrw,
+        12212.322524612002399999uluna,
+        209783.980098456051199999umnt,
+        45.653636121684399999usdr,
+        0.086666469344599999usek,
+        0.000000310306399999usgd,
+        0.980097218769599999uthb,
+        8512.715450855827199999uusd'))
+
+{
+    'token': 'luna', 
+    'delegation': [
+        {
+            'validator': 'LunaOrbit', 
+            'noOfStakedCoins': 1.0, 'usd_value': {'usd': 5.19, 'inr': 385.53}, 'total_usd_value': 5.19, 'total_inr_value': 385.53, 'rewards': '', 'rewards_usd_val': '', 'reward_inr_val': ''}, 
+        {
+            'validator': 'Orbital Command', 
+            'noOfStakedCoins': 0.4, 'usd_value': {'usd': 5.19, 'inr': 385.53}, 'total_usd_value': 2.076, 'total_inr_value': 154.212, 'rewards': '', 'rewards_usd_val': '', 'reward_inr_val': ''}, 
+        {
+            'validator': 'Orion.Money', 
+            'noOfStakedCoins': 1.0, 'usd_value': {'usd': 5.19, 'inr': 385.53}, 'total_usd_value': 5.19, 'total_inr_value': 385.53, 'rewards': '', 'rewards_usd_val': '', 'reward_inr_val': ''}, 
+        {
+            'validator': 'Terra Bites', 
+            'noOfStakedCoins': 1.0, 'usd_value': {'usd': 5.19, 'inr': 385.53}, 'total_usd_value': 5.19, 'total_inr_value': 385.53, 'rewards': '', 'rewards_usd_val': '', 'reward_inr_val': ''}]
+        ,
+        'total': {'noOfStakedCoins': 'number', 'usd_value': 'usd value', 'total_usd_value': 'total value', 'total_inr_value': 'total inr_value', 'rewards': '', 'rewards_usd_val': '', 'reward_inr_val': ''}
+    }

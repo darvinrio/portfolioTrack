@@ -1,0 +1,8 @@
+{
+    "walletName" : "walletName",
+    "network" : "base coin",
+    "wallet_address" : "public_key",
+    "base" : "baseBalances" ,
+    "tokens" : null,
+    "defi" : null
+}
